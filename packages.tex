@@ -1,0 +1,51 @@
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{soulutf8}
+\usepackage[table,xcdraw,usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            citecolor = blue,
+            urlcolor  = NavyBlue,
+            pdftitle={Thesis - Firstname LASTNAME},
+]{hyperref}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xparse}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{epigraph}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{minted}
+\usepackage{tabularx}
+
+\graphicspath{ {images/} }
+\sloppy
+
+\renewcommand{\labelitemi}{\textendash}
+
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\abstractname}{Abstract}
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{Table list}
+
+\definecolor{inlineBG}{HTML}{F1F1F1}
+
+\newcommand{\codeinline}[1]{{%
+  \sethlcolor{inlineBG}%
+  \color[HTML]{263a8c}%
+  \ttfamily%
+  \hl{#1}%
+}}
+
+\newcommand{\iref}[1]{{%
+  \color[HTML]{1d3cbf}%
+  \ttfamily%
+  \textit{\ref{#1} \nameref{#1}}%
+}}

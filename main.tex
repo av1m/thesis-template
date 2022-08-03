@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\include{packages}
+
+\date{January 1, 1970}
+\title{\textbf{Title}}
+\author{
+    Firstname NAME \\
+    \\
+    Company: Company
+    \vspace{2mm} \\
+    Teacher tutor: NAME Firstname \\
+    Master Learning : NAME Firstname \\
+}
+
+\begin{document}
+
+\begin{center}
+	\includegraphics[height=1cm]{dauphine.png}
+	\vspace{2mm}
+	\\
+	\large{
+		University thesis presented at Paris Dauphine University for obtaining the Master's diploma ...
+	}
+\end{center}
+
+{\let\newpage\relax\vspace{-3em}\maketitle}
+
+% Remove page number in the first page
+\thispagestyle{empty}
+
+% Transition to Roman numerals
+\pagenumbering{roman}
+
+% Abstract
+\input{sections/abstract}
+
+% Quote
+\newpage
+\setlength\epigraphwidth{9cm}
+\setlength\epigraphrule{0pt}
+\epigraph{"That's one small step for man, on giant leap for mankind"}{--- Neil Alden Armstrong}
+
+% Font
+\titleformat*{\section}{\LARGE\bfseries}
+
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\listoftables
+\newpage
+
+% Thanks
+\phantomsection
+\addcontentsline{toc}{section}{Thanks}
+\include{sections/thanks}
+\newpage
+
+% Acronyms
+\phantomsection
+\addcontentsline{toc}{section}{Acronyms}
+\include{sections/acronyms}
+\newpage
+
+% Switch to Arabic numerals
+\pagenumbering{arabic}
+
+% -------- Sections --------
+\include{sections/contexte}
+% ADD A NEW FILE IN sections/ %
+% AND
+% PUT NEXT SECTIONS HERE %
+\include{sections/conclusion}
+
+% Bibliography
+\addcontentsline{toc}{section}{Bibliography}
+\include{sections/bibliography}
+
+\end{document}
